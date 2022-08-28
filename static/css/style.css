@@ -1,0 +1,124 @@
+.marg-div-forum-2 {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: right ;
+}
+.btn{
+    margin-right: 5px;
+}
+.input-group{
+    margin: 0%;
+}
+.header{
+    background:white;
+    height: 64px;
+    transition: all 300ms ease-in-out;
+    width: 100%;
+    opacity: .75;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    box-shadow: 0px 3px 5px #E6E6E6;
+}
+.header:hover{
+    height: 74px;
+}
+.header-div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: snow; */
+}
+#lox{
+    background: #ffc107;
+    border-radius: 5px;
+}
+#lox:hover{
+    color: white;
+}
+
+.link{
+    color: gray;
+    text-decoration: none;
+    font-size: large;
+    transition: all 300ms ease-in-out;
+    /* border-right: 1px solid rgb(36, 36, 36); */
+    padding: 5px 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.link:hover{
+    border: none;
+    border-radius: 10px;
+    color: rgb(249, 188, 33);
+    box-shadow: 0px 0px 7px rgb(255, 219, 113);
+}
+#WEB{
+    transition: all 300ms ease-in-out;
+    animation: coloranim 1.5s infinite;
+}
+@keyframes coloranim{
+    0%{
+        /* font-size: large; */
+        /* color: rgb(180, 255, 66); */
+        color: rgb(198, 255, 113);
+        text-shadow: 0px 0px 10px rgb(153, 255, 0);
+    }
+    50%{
+        /* font-size: larger; */
+        color: rgb(255, 211, 80);
+        text-shadow: 0px 0px 10px rgb(255, 191, 0);
+    }
+    100%{
+        /* font-size: larger; */
+        color: rgb(198, 255, 113);
+        text-shadow: 0px 0px 10px rgb(153, 255, 0);
+    }
+}
+.main{
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.main-div{
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    width: 60%;
+}
+.forum-main{
+    /*height: 100%;*/
+    margin: 0px 10px;
+}
+.border{
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px gray;
+    margin: 10px 0px;
+}
+.inline-ti{
+    width: 100%;
+    display: flex;
+}
+.inline{
+    width: 100%;
+}
+.right-forum{
+    margin-left: 5px;
+}
+.Append{
+    width: 30%;
+    position: fixed right;
+}
+.span{
+    inline-size: 100%;
+    overflow-wrap: break-word;
+}
+.nonfull{
+    background: #AFDFDF;
+}

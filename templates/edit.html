@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Edit Query
+{% endblock %}
+
+{% block body %}
+
+{% if isAdmin == 'true' %}
+<form method="post" name="form1" class="d-flex justify-content-center form">
+    <div class="forum-main border">
+        <div class="mb-3">
+            <h1>Edit Your Query</h1>
+        </div>
+        <div class="inline-ti">
+            <div class="mb-3 inline">
+                <label for="exampleFormControlTextarea1" class="form-label">Title</label>
+                <input id="title" name="title" class="form-control" value="{{ article.title }}">
+                <label id="errorTitle" class="form-label"></label>
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+            <textarea id="text" name="text" class="form-control" id="exampleFormControlTextarea1" rows="5"
+                style="width: 100%;">{{ article.text }}</textarea>
+            <label id="errorText" for="exampleFormControlTextarea1" class="form-label"></label>
+
+        </div>
+        <div class="mb-3">
+            <label id="errorName" for="exampleFormControlTextarea1" class="form-label">Your Name, Append</label>
+            <div class="marg-div-forum-2">
+                <input id="name" name="name" value="{{ article.name }}" class="form-control" id="exampleFormControlInput1" style="margin-right: 5px;" placeholder="Your name">
+<!--                <label id="errorName" for="exampleFormControlTextarea1" class="form-label"></label>-->
+                <button class="btn btn-outline-success" type="button" onclick="getInputs()">Append</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% else %}
+<div class="d-flex justify-content-center">
+    <h1>You are not admin and can't do that :)</h1>
+</div>
+{% endif %}
+{% endblock %}

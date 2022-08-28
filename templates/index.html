@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Chat
+{% endblock %}
+
+{% block body %}
+<div class="main">
+
+    <div class="main-div content">
+        {% for el in articles %}
+        <h3 class="span">{{ el.title }} </h3>
+        <div class=" border nonfull">
+            <div class="marg-div-forum">
+<!--                <h5 class="span">{{ el.intro }}</h5>-->
+                <span class="span">{{ el.text }}</span>
+            </div>
+            <br>
+            {% if isAdmin == 'true' %}
+            <div method="post" class="marg-div-forum-2">
+                <h5 class="span">{{ el.name }}</h5>
+                <a href="/home/{{ el.id }}/edit" name="delete" class="btn btn-success">Edit</a>
+                <a href="/home/{{ el.id }}/del" name="edit" class="btn btn-danger">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% if articles|length == 0 %}
+        <div class="d-flex justify-content-center">
+            <h1>No forms now here!</h1>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <!-- append -->
+</div>
+{% endblock %}

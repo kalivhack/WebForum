@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Admin
+{% endblock %}
+
+{% block body %}
+
+<form method="post" name="form1" class="d-flex justify-content-center form">
+    <div class="forum-main border">
+        <div class="mb-3">
+            <h1>Admin Checking</h1>
+        </div>
+        <div class="inline-ti">
+            <div class="mb-3 inline">
+                <label for="exampleFormControlTextarea1" class="form-label">Name</label>
+                <input id="name" name="name" class="form-control">
+                <label id="errorName" class="form-label"></label>
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Email</label>
+            <input id="email" name="email" type="email" class="form-control" id="exampleFormControlTextarea1" rows="5"
+                style="width: 100%;">
+            <label id="errorEmail" for="exampleFormControlTextarea1" class="form-label"></label>
+
+        </div>
+        <div class="mb-3">
+            <label id="errorPat" for="exampleFormControlTextarea1" class="form-label">Your pat</label>
+            <div class="marg-div-forum-2">
+                <input id="pat" name="pat" class="form-control" id="exampleFormControlInput1" style="margin-right: 5px;" placeholder="Your name">
+<!--                <label id="errorName" for="exampleFormControlTextarea1" class="form-label"></label>-->
+                <button class="btn btn-outline-success" type="button" onclick="getInputs1()">Append</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
